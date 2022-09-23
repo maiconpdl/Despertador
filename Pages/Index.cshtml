@@ -1,0 +1,136 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Despertador</title>
+        <script src="~/lib/jquery/dist/jquery.js"></script>
+        <script src="~/lib/bootstrap/"></script>
+        <script src="~/js/Index.js" type="text/javascript"></script>
+        <link rel="stylesheet" href="~/css/estilo.css"/>
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css"/>
+    </head>
+    <body>
+        
+
+        <div class="container">
+            <div style="height: 100px;">
+                <h1 id="horaAtual" onload="setInterval()"></h1>
+            </div>
+            
+            <div class="dropdown" style="display: inline;">
+                <button class="btn btn-secondary dropdown-toggle" style="width: 110px;" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                  <label id="labelHoras">HORAS</label>
+                </button>
+                <ul style="max-height: 280px; overflow-y: auto;" class="dropdown-menu  dropdown-menu-dark" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" onclick="defineHoras(00)">00</a></li>
+                    <li><a class="dropdown-item" onclick="defineHoras(01)">01</a></li>
+                    <li><a class="dropdown-item" onclick="defineHoras(02)">02</a></li>
+                    <li><a class="dropdown-item" onclick="defineHoras(03)">03</a></li>
+                    <li><a class="dropdown-item" onclick="defineHoras(04)">04</a></li>
+                    <li><a class="dropdown-item" onclick="defineHoras(05)">05</a></li>
+                    <li><a class="dropdown-item" onclick="defineHoras(06)">06</a></li>
+                    <li><a class="dropdown-item" onclick="defineHoras(07)">07</a></li>
+                    <li><a class="dropdown-item" onclick="defineHoras(08)">08</a></li>
+                    <li><a class="dropdown-item" onclick="defineHoras(09)">09</a></li>
+                    <li><a class="dropdown-item" onclick="defineHoras(10)">10</a></li>
+                    <li><a class="dropdown-item" onclick="defineHoras(11)">11</a></li>
+                    <li><a class="dropdown-item" onclick="defineHoras(12)">12</a></li>
+                    <li><a class="dropdown-item" onclick="defineHoras(13)">13</a></li>
+                    <li><a class="dropdown-item" onclick="defineHoras(14)">14</a></li>
+                    <li><a class="dropdown-item" onclick="defineHoras(15)">15</a></li>
+                    <li><a class="dropdown-item" onclick="defineHoras(16)">16</a></li>
+                    <li><a class="dropdown-item" onclick="defineHoras(17)">17</a></li>
+                    <li><a class="dropdown-item" onclick="defineHoras(18)">18</a></li>
+                    <li><a class="dropdown-item" onclick="defineHoras(19)">19</a></li>
+                    <li><a class="dropdown-item" onclick="defineHoras(20)">20</a></li>
+                    <li><a class="dropdown-item" onclick="defineHoras(21)">21</a></li>
+                    <li><a class="dropdown-item" onclick="defineHoras(22)">22</a></li>
+                    <li><a class="dropdown-item" onclick="defineHoras(23)">23</a></li>
+                </ul>
+              </div>
+
+
+              <div class="dropdown" style="display: inline;">
+                <button class="btn btn-secondary dropdown-toggle" style="width: 110px;" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                  <label id="labelMinutos">MINUTOS</label>
+                </button>
+                <ul style="max-height: 280px; overflow-y: auto;" class="dropdown-menu  dropdown-menu-dark" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item active" onclick="defineMinutos(00)">00</a></li>
+                    <li><a class="dropdown-item" onclick="defineMinutos(01)">01</a></li>
+                    <li><a class="dropdown-item" onclick="defineMinutos(02)">02</a></li>
+                    <li><a class="dropdown-item" onclick="defineMinutos(03)">03</a></li>
+                    <li><a class="dropdown-item" onclick="defineMinutos(04)">04</a></li>
+                    <li><a class="dropdown-item" onclick="defineMinutos(05)">05</a></li>
+                    <li><a class="dropdown-item" onclick="defineMinutos(06)">06</a></li>
+                    <li><a class="dropdown-item" onclick="defineMinutos(07)">07</a></li>
+                    <li><a class="dropdown-item" onclick="defineMinutos(08)">08</a></li>
+                    <li><a class="dropdown-item" onclick="defineMinutos(09)">09</a></li>
+                    <li><a class="dropdown-item" onclick="defineMinutos(10)">10</a></li>
+                    <li><a class="dropdown-item" onclick="defineMinutos(11)">11</a></li>
+                    <li><a class="dropdown-item" onclick="defineMinutos(12)">12</a></li>
+                    <li><a class="dropdown-item" onclick="defineMinutos(13)">13</a></li>
+                    <li><a class="dropdown-item" onclick="defineMinutos(14)">14</a></li>
+                    <li><a class="dropdown-item" onclick="defineMinutos(15)">15</a></li>
+                    <li><a class="dropdown-item" onclick="defineMinutos(16)">16</a></li>
+                    <li><a class="dropdown-item" onclick="defineMinutos(17)">17</a></li>
+                    <li><a class="dropdown-item" onclick="defineMinutos(18)">18</a></li>
+                    <li><a class="dropdown-item" onclick="defineMinutos(19)">19</a></li>
+                    <li><a class="dropdown-item" onclick="defineMinutos(20)">20</a></li>
+                    <li><a class="dropdown-item" onclick="defineMinutos(21)">21</a></li>
+                    <li><a class="dropdown-item" onclick="defineMinutos(22)">22</a></li>
+                    <li><a class="dropdown-item" onclick="defineMinutos(23)">23</a></li>
+                    <li><a class="dropdown-item" onclick="defineMinutos(24)">24</a></li>
+                    <li><a class="dropdown-item" onclick="defineMinutos(25)">25</a></li>
+                    <li><a class="dropdown-item" onclick="defineMinutos(26)">26</a></li>
+                    <li><a class="dropdown-item" onclick="defineMinutos(27)">27</a></li>
+                    <li><a class="dropdown-item" onclick="defineMinutos(28)">28</a></li>
+                    <li><a class="dropdown-item" onclick="defineMinutos(29)">29</a></li>
+                    <li><a class="dropdown-item" onclick="defineMinutos(30)">30</a></li>
+                    <li><a class="dropdown-item" onclick="defineMinutos(31)">31</a></li>
+                    <li><a class="dropdown-item" onclick="defineMinutos(32)">32</a></li>
+                    <li><a class="dropdown-item" onclick="defineMinutos(33)">33</a></li>
+                    <li><a class="dropdown-item" onclick="defineMinutos(34)">34</a></li>
+                    <li><a class="dropdown-item" onclick="defineMinutos(35)">35</a></li>
+                    <li><a class="dropdown-item" onclick="defineMinutos(36)">36</a></li>
+                    <li><a class="dropdown-item" onclick="defineMinutos(37)">37</a></li>
+                    <li><a class="dropdown-item" onclick="defineMinutos(38)">38</a></li>
+                    <li><a class="dropdown-item" onclick="defineMinutos(39)">39</a></li>
+                    <li><a class="dropdown-item" onclick="defineMinutos(40)">40</a></li>
+                    <li><a class="dropdown-item" onclick="defineMinutos(41)">41</a></li>
+                    <li><a class="dropdown-item" onclick="defineMinutos(42)">42</a></li>
+                    <li><a class="dropdown-item" onclick="defineMinutos(43)">43</a></li>
+                    <li><a class="dropdown-item" onclick="defineMinutos(44)">44</a></li>
+                    <li><a class="dropdown-item" onclick="defineMinutos(45)">45</a></li>
+                    <li><a class="dropdown-item" onclick="defineMinutos(46)">46</a></li>
+                    <li><a class="dropdown-item" onclick="defineMinutos(47)">47</a></li>
+                    <li><a class="dropdown-item" onclick="defineMinutos(48)">48</a></li>
+                    <li><a class="dropdown-item" onclick="defineMinutos(49)">49</a></li>
+                    <li><a class="dropdown-item" onclick="defineMinutos(50)">50</a></li>
+                    <li><a class="dropdown-item" onclick="defineMinutos(51)">51</a></li>
+                    <li><a class="dropdown-item" onclick="defineMinutos(52)">52</a></li>
+                    <li><a class="dropdown-item" onclick="defineMinutos(53)">53</a></li>
+                    <li><a class="dropdown-item" onclick="defineMinutos(54)">54</a></li>
+                    <li><a class="dropdown-item" onclick="defineMinutos(55)">55</a></li>
+                    <li><a class="dropdown-item" onclick="defineMinutos(56)">56</a></li>
+                    <li><a class="dropdown-item" onclick="defineMinutos(57)">57</a></li>
+                    <li><a class="dropdown-item" onclick="defineMinutos(58)">58</a></li>
+                    <li><a class="dropdown-item" onclick="defineMinutos(59)">59</a></li>
+                </ul>
+              </div>
+             
+              <div id="btn" style="margin-top: 20px;">                      
+                  <input class="btn btn-lg" type="button" id="btnLigar" name="btnLigaDesliga" value="LIGAR" onclick="controle()"/>
+              </div>
+
+            </div>    
+
+    </body>
+</html>

@@ -1,0 +1,44 @@
+﻿@page
+@model Despertador.Pages.CronometroModel
+@{
+}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Cronômetro</title>
+        <script src="~/lib/jquery/dist/jquery.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="~/css~/css/estilo.css"/>
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css"/>
+    </head>
+    <body style="text-align:center;">
+
+<form name="form_main">
+    <div class="cronometro" style="font-size:30px; font-weight:700;">
+      <span style="font-size:50px;" id="hour">00</span>:
+      <span style="font-size:50px;" id="minute">00</span>:
+      <span style="font-size:50px;" id="second">00</span>:
+      <span style="font-size:50px;" id="millisecond">000</span>
+    </div>
+  
+    <br />
+  <div class="btnsCronometro">
+    <button class="btn btnCronometro btn-success btn-lg" type="button" name="start">Iniciar</button>
+    <button class="btn btnCronometro btn-secondary btn-lg" type="button" name="volta">Volta</button>
+    <a href="javascript:pararZerar()"><button class="btn btnCronometro btn-danger btn-lg" type="button" id="btnParar" name="reset">Parar</button></a>
+  </div>
+    
+  </form>
+  <div class="divVoltas">
+
+  </div>
+  <div id="divTable">
+
+  </div>
+  
+  <script src="~/js/cronometro.js" type="text/javascript"></script>
+    </body>
+</html>

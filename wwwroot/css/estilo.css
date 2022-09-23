@@ -1,0 +1,61 @@
+.container{
+    text-align: center;
+    margin-top: 100px;
+}
+
+#horaAtual{
+    font-size: 90px;
+    font-weight: 700;
+}
+
+.menu{
+    display: inline;
+    margin-left: 20px; margin-right: 20px;
+    color: rgb(255, 255, 255); font-weight: 700;
+    text-decoration: none;
+}
+
+.btnMenu{
+    text-decoration: none;
+    background-color: rgb(91, 33, 226);
+    color: white;
+    border: none;
+    height: 50px;
+}
+
+.btnMenu:hover{
+    background-color: rgb(33, 203, 226);
+}
+
+.cronometro{
+    text-align: center;
+    margin-top: 50px;
+    font-size: 90px;
+    font-weight: 700;
+}
+
+.btnsCronometro{
+    text-align: center;
+    font-size: 30px;    
+}
+
+.btnCronometro{
+    width: 100px;
+}
+
+#divTable{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    text-align: center;
+    width: 500px;
+}
+
+.tableVolta{
+    border: solid;
+}
+
+.dropdown-menu {
+    max-height: 280px;
+    overflow-y: auto;
+}

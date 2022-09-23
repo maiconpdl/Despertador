@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Despertador</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Despertador.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <nav class="navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            
+                
+                <div style="text-align:center; font-weight:700; background-color: aquamarine;" class="col-md-12 navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <div class="col-md-4">
+                        <a style="font-size: 30px;" class="navbar-brand" asp-area="" asp-page="/Index">Despertador</a>
+                    </div>
+                    <div class="col-md-4">
+                        <a style="font-size: 30px;" class="navbar-brand" asp-area="" asp-page="/Cronometro">Crônometro</a>
+                    </div>
+                    <div class="col-md-4">
+                        <a style="font-size: 30px;" class="navbar-brand" asp-area="" asp-page="/Temporizador">Temporizador</a>
+                    </div>
+                    
+                </div>
+            
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
